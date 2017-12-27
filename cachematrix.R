@@ -75,3 +75,19 @@ cacheSolve <- function(mat, ...) {
   inverse
 }
 
+# test the functions
+
+tmat <- matrix (1:4,2,2)
+tmat
+cacheMatrix <- makeCacheMatrix(tmat)
+cacheMatrix$get()
+cacheMatrix$getInv()
+cacheSolve(cacheMatrix)
+ 
+
+tmat <- matrix(c(5,3,2,1,6,7,9,5,2,4,1,0,3,2,4,0),4,4)
+tmat
+cacheMatrix <- makeCacheMatrix(tmat)
+cacheMatrix$get()
+cacheMatrix$getInv()
+cacheSolve(cacheMatrix)
